@@ -71,10 +71,6 @@
   with_items:
     - monitor-output.service
     - capture-output.service
-- name: Change GPU memory size to 128
-  command: raspi-config nonint do_memory_split 128
-  become: yes
-  become_user: root
 
 - name: Restart and enable services
   systemd:
